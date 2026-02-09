@@ -1,0 +1,193 @@
+{
+    "common": {
+        "loading": "Načítání...",
+        "error": "Něco se pokazilo",
+        "save": "Uložit",
+        "cancel": "Zrušit",
+        "delete": "Smazat",
+        "edit": "Upravit",
+        "search": "Hledat",
+        "filter": "Filtrovat",
+        "clear": "Vymazat",
+        "submit": "Odeslat",
+        "back": "Zpět",
+        "next": "Další",
+        "viewAll": "Zobrazit vše",
+        "seeMore": "Více",
+        "noResults": "Žádné výsledky"
+    },
+    "nav": {
+        "home": "Domů",
+        "search": "Najít talent",
+        "messages": "Zprávy",
+        "profile": "Profil",
+        "login": "Přihlásit se",
+        "register": "Registrace",
+        "logout": "Odhlásit se"
+    },
+    "home": {
+        "hero": {
+            "title": "Objevte performerský talent",
+            "subtitle": "Spojte se s hudebníky, sportovci, herci a performery z celého světa",
+            "cta": "Začít prohlížet"
+        },
+        "categories": {
+            "title": "Procházet podle kategorie",
+            "music": "Hudba",
+            "sports": "Sport",
+            "acting": "Herectví",
+            "dance": "Tanec",
+            "circus": "Cirkusové umění",
+            "other": "Ostatní"
+        },
+        "featured": {
+            "title": "Vybraní talenti",
+            "viewProfile": "Zobrazit profil"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Vítejte zpět",
+            "subtitle": "Přihlaste se ke svému účtu",
+            "email": "E-mail",
+            "password": "Heslo",
+            "submit": "Přihlásit se",
+            "forgotPassword": "Zapomněli jste heslo?",
+            "noAccount": "Nemáte účet?",
+            "signUp": "Zaregistrovat se"
+        },
+        "register": {
+            "title": "Připojte se k UpRole",
+            "subtitle": "Vytvořte si profil performera",
+            "name": "Celé jméno",
+            "email": "E-mail",
+            "password": "Heslo",
+            "confirmPassword": "Potvrdit heslo",
+            "submit": "Vytvořit účet",
+            "hasAccount": "Již máte účet?",
+            "signIn": "Přihlásit se"
+        },
+        "google": "Pokračovat přes Google",
+        "or": "nebo"
+    },
+    "profile": {
+        "title": "Profil",
+        "editProfile": "Upravit profil",
+        "addSkill": "Přidat dovednost",
+        "skills": "Dovednosti",
+        "about": "O mně",
+        "contact": "Kontakt",
+        "location": "Lokace",
+        "languages": "Jazyky",
+        "availability": "Dostupnost",
+        "experience": "Zkušenosti",
+        "noSkills": "Zatím nebyly přidány žádné dovednosti",
+        "username": "Uživatelské jméno (Profilová URL)",
+        "usernameHint": "Toto bude vaše veřejná adresa profilu",
+        "usernameAvailable": "Uživatelské jméno je volné",
+        "usernameTaken": "Uživatelské jméno je již obsazeno",
+        "usernameInvalid": "Uživatelské jméno může obsahovat pouze písmena, čísla a podtržítka",
+        "posts": "Příspěvky",
+        "profilePicture": "Profilový obrázek",
+        "availabilityOptions": {
+            "available": "Dostupný/á",
+            "maybe": "Možná",
+            "busy": "Zaneprázdněný/á"
+        }
+    },
+    "posts": {
+        "placeholder": "Co máte na mysli?",
+        "like": "To se mi líbí",
+        "comment": "Komentovat",
+        "share": "Sdílet",
+        "emptyFollowedFeed": "Zatím zde nejsou žádné příspěvky od lidí, které sledujete. Začněte sledovat ostatní, abyste viděli jejich příspěvky!"
+    },
+    "skill": {
+        "category": "Kategorie",
+        "subcategory": "Podkategorie",
+        "specialty": "Specializace",
+        "experienceLevel": "Úroveň zkušeností",
+        "yearsOfExperience": "Roky zkušeností",
+        "approach": "Přístup/Styl",
+        "description": "Popis",
+        "rate": "Sazba",
+        "availability": "Dostupnost",
+        "certifications": "Certifikace",
+        "media": "Fotky a videa",
+        "levels": {
+            "beginner": "Začátečník",
+            "intermediate": "Mírně pokročilý",
+            "advanced": "Pokročilý",
+            "professional": "Profesionál",
+            "master": "Mistr"
+        },
+        "availabilityOptions": {
+            "fullTime": "Na plný úvazek",
+            "partTime": "Na částečný úvazek",
+            "freelance": "Freelance",
+            "weekends": "Pouze víkendy",
+            "evenings": "Pouze večery",
+            "project": "Projektově"
+        }
+    },
+    "search": {
+        "title": "Najít talent",
+        "placeholder": "Hledat dovednosti, jména, lokace...",
+        "filters": {
+            "category": "Kategorie",
+            "location": "Lokace",
+            "experience": "Úroveň zkušeností",
+            "availability": "Dostupnost",
+            "priceRange": "Cenové rozpětí"
+        },
+        "results": "Nalezeno {{count}} výsledků",
+        "sortBy": "Seřadit podle",
+        "sortOptions": {
+            "relevance": "Relevance",
+            "newest": "Nejnovější",
+            "experience": "Nejzkušenější",
+            "rating": "Nejlépe hodnocení"
+        }
+    },
+    "skillForm": {
+        "title": "Přidat novou dovednost",
+        "editTitle": "Upravit dovednost",
+        "field": "Oblast",
+        "selectField": "Vyberte oblast",
+        "specialization": "Specializace",
+        "selectOption": "Vyberte možnost",
+        "startedMonth": "Měsíc zahájení",
+        "startedYear": "Rok zahájení",
+        "experience": "Zkušenosti",
+        "invalidDate": "Neplatné datum",
+        "skillLevel": "Úroveň dovednosti",
+        "selectLevel": "Vyberte úroveň",
+        "style": "Styl",
+        "styles": "Styly",
+        "addStyles": "Přidat styly...",
+        "details": "Podrobnosti",
+        "source": "Zdroj",
+        "selectSource": "Vyberte zdroj",
+        "influences": "Vlivy",
+        "addInfluences": "Přidat vzory...",
+        "equipment": "Vybavení",
+        "addEquipment": "Přidat vybavení...",
+        "practising": "Frekvence cvičení",
+        "selectFrequency": "Vyberte frekvenci",
+        "extras": "Doplňky",
+        "canReadNotes": "Umí číst noty",
+        "openForNudes": "Otevřen/a pro akty",
+        "openForDisgrace": "Otevřen/a pro náročné role",
+        "youtubeLinks": "YouTube videa",
+        "addYoutubeLink": "Přidat YouTube odkaz",
+        "save": "Uložit dovednost"
+    },
+    "footer": {
+        "tagline": "Propojujeme performery s příležitostmi",
+        "about": "O UpRole",
+        "privacy": "Zásady ochrany osobních údajů",
+        "terms": "Podmínky služby",
+        "contact": "Kontaktujte nás",
+        "copyright": "© {{year}} UpRole. Všechna práva vyhrazena."
+    }
+}

@@ -1,0 +1,25 @@
+.feedContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--color-text-muted);
+}
+
+.error {
+    color: var(--color-error);
+}
+
+.emptyFeed {
+    text-align: center;
+    padding: var(--space-xl);
+    background: white;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-muted);
+}

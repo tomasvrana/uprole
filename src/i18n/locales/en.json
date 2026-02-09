@@ -1,0 +1,195 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "search": "Search",
+        "filter": "Filter",
+        "clear": "Clear",
+        "submit": "Submit",
+        "back": "Back",
+        "addMedia": "Add Media",
+        "errorMaxFiles": "Maximum number of files reached",
+        "next": "Next",
+        "viewAll": "View All",
+        "seeMore": "See More",
+        "noResults": "No results found"
+    },
+    "nav": {
+        "home": "Home",
+        "search": "Find Talent",
+        "messages": "Messages",
+        "profile": "Profile",
+        "login": "Log In",
+        "register": "Sign Up",
+        "logout": "Log Out"
+    },
+    "home": {
+        "hero": {
+            "title": "Discover Performing Talent",
+            "subtitle": "Connect with musicians, athletes, actors, and performers worldwide",
+            "cta": "Start Exploring"
+        },
+        "categories": {
+            "title": "Browse by Category",
+            "music": "Music",
+            "sports": "Sports",
+            "acting": "Acting",
+            "dance": "Dance",
+            "circus": "Circus Arts",
+            "other": "Other"
+        },
+        "featured": {
+            "title": "Featured Talent",
+            "viewProfile": "View Profile"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Welcome Back",
+            "subtitle": "Sign in to your account",
+            "email": "Email",
+            "password": "Password",
+            "submit": "Sign In",
+            "forgotPassword": "Forgot password?",
+            "noAccount": "Don't have an account?",
+            "signUp": "Sign up"
+        },
+        "register": {
+            "title": "Join UpRole",
+            "subtitle": "Create your performer profile",
+            "name": "Full Name",
+            "email": "Email",
+            "password": "Password",
+            "confirmPassword": "Confirm Password",
+            "submit": "Create Account",
+            "hasAccount": "Already have an account?",
+            "signIn": "Sign in"
+        },
+        "google": "Continue with Google",
+        "or": "or"
+    },
+    "profile": {
+        "title": "Profile",
+        "editProfile": "Edit Profile",
+        "addSkill": "Add Skill",
+        "skills": "Skills",
+        "about": "About",
+        "contact": "Contact",
+        "location": "Location",
+        "languages": "Languages",
+        "availability": "Availability",
+        "experience": "Experience",
+        "noSkills": "No skills added yet",
+        "username": "Username (Profile URL)",
+        "usernameHint": "This will be your public profile URL slug",
+        "usernameAvailable": "Username is available",
+        "usernameTaken": "Username is already taken",
+        "usernameInvalid": "Username can only contain letters, numbers, and underscores",
+        "posts": "Posts",
+        "profilePicture": "Profile Picture",
+        "availabilityOptions": {
+            "available": "Available",
+            "maybe": "Maybe",
+            "busy": "Busy"
+        }
+    },
+    "posts": {
+        "placeholder": "What's on your mind?",
+        "like": "Like",
+        "comment": "Comment",
+        "share": "Share",
+        "emptyFollowedFeed": "No posts from people you follow yet. Start following people to see their posts here!"
+    },
+    "skill": {
+        "category": "Category",
+        "subcategory": "Subcategory",
+        "specialty": "Specialty",
+        "experienceLevel": "Experience Level",
+        "yearsOfExperience": "Years of Experience",
+        "approach": "Approach/Style",
+        "description": "Description",
+        "rate": "Rate",
+        "availability": "Availability",
+        "certifications": "Certifications",
+        "media": "Photos & Videos",
+        "levels": {
+            "beginner": "Beginner",
+            "intermediate": "Intermediate",
+            "advanced": "Advanced",
+            "professional": "Professional",
+            "master": "Master"
+        },
+        "availabilityOptions": {
+            "fullTime": "Full-time",
+            "partTime": "Part-time",
+            "freelance": "Freelance",
+            "weekends": "Weekends only",
+            "evenings": "Evenings only",
+            "project": "Project-based"
+        }
+    },
+    "search": {
+        "title": "Find Talent",
+        "placeholder": "Search skills, names, locations...",
+        "filters": {
+            "category": "Category",
+            "location": "Location",
+            "experience": "Experience Level",
+            "availability": "Availability",
+            "priceRange": "Price Range"
+        },
+        "results": "{{count}} results found",
+        "sortBy": "Sort by",
+        "sortOptions": {
+            "relevance": "Relevance",
+            "newest": "Newest",
+            "experience": "Most Experienced",
+            "rating": "Highest Rated"
+        }
+    },
+    "skillForm": {
+        "title": "Add New Skill",
+        "editTitle": "Edit Skill",
+        "field": "Field",
+        "selectField": "Select Field",
+        "specialization": "Specialization",
+        "selectOption": "Select Option",
+        "startedMonth": "Started Month",
+        "startedYear": "Started Year",
+        "experience": "Experience",
+        "invalidDate": "Invalid date",
+        "skillLevel": "Skill Level",
+        "selectLevel": "Select Level",
+        "style": "Style",
+        "styles": "Styles",
+        "addStyles": "Add styles...",
+        "details": "Details",
+        "source": "Source",
+        "selectSource": "Select Source",
+        "influences": "Influences",
+        "addInfluences": "Add idols...",
+        "equipment": "Equipment",
+        "addEquipment": "Add gear...",
+        "practising": "Practising Frequency",
+        "selectFrequency": "Select Frequency",
+        "extras": "Extras",
+        "canReadNotes": "Can read notes",
+        "openForNudes": "Open for nudes",
+        "openForDisgrace": "Open for disgrace",
+        "youtubeLinks": "YouTube Videos",
+        "addYoutubeLink": "Add YouTube Link",
+        "save": "Save Skill"
+    },
+    "footer": {
+        "tagline": "Connecting performers with opportunities",
+        "about": "About UpRole",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "contact": "Contact Us",
+        "copyright": "© {{year}} UpRole. All rights reserved."
+    }
+}
