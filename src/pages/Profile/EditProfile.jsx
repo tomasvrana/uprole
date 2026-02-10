@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useAuthStore from '../../stores/authStore';
 import { updateUserProfile, isUsernameAvailable } from '../../services/users';
+import { getUserSkills, deleteSkill } from '../../services/skills';
 import { uploadFile } from '../../services/storage';
 import MediaUpload from '../../components/common/MediaUpload/MediaUpload';
 import styles from './EditProfile.module.css';
@@ -41,6 +42,8 @@ const EditProfile = () => {
         message: ''
     });
 
+    const [skills, setSkills] = useState([]);
+
     useEffect(() => {
         if (profile) {
             setFormData({
@@ -54,8 +57,13 @@ const EditProfile = () => {
                 languages: profile.languages || [],
                 availability: profile.availability || 'available'
             });
+
+            // Fetch skills
+            getUserSkills(user.uid)
+                .then(setSkills)
+                .catch(err => console.error('Error fetching skills:', err));
         }
-    }, [profile]);
+    }, [profile, user.uid]);
 
     const checkUsername = useCallback(
         debounce(async (username) => {
@@ -190,7 +198,7 @@ const EditProfile = () => {
             navigate(`/@${formData.username}`);
         } catch (err) {
             console.error('Error updating profile:', err);
-            setError(t('common.error'));
+            setError(err.message || t('common.error'));
         } finally {
             setIsSubmitting(false);
         }
@@ -333,6 +341,61 @@ const EditProfile = () => {
                             placeholder="Tell us about yourself and your performing experience..."
                         />
                     </div>
+                </div>
+
+                <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>{t('profile.skills') || 'Skills'}</h2>
+                    <button
+                        type="button"
+                        className="btn btn-secondary"
+                        onClick={() => navigate('/profile/add-skill')}
+                    >
+                        {t('profile.addSkill') || 'Add Skill'}
+                    </button>
+                </div>
+
+                <div className={styles.skillsList}>
+                    {skills.length > 0 ? (
+                        skills.map(skill => (
+                            <div key={skill.id} className={styles.skillItem}>
+                                <div className={styles.skillInfo}>
+                                    <span className={styles.skillCategory}>{skill.category}</span>
+                                    <span className={styles.skillName}>{skill.subcategory}</span>
+                                    {skill.skillLevel && <span className={styles.skillLevel}>{skill.skillLevel}</span>}
+                                </div>
+                                <div className={styles.skillActions}>
+                                    <button
+                                        type="button"
+                                        className="btn btn-secondary btn-small"
+                                        onClick={() => navigate(`/profile/edit-skill/${skill.id}`)}
+                                        title="Edit Skill"
+                                    >
+                                        ✏️
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="btn btn-danger btn-small"
+                                        onClick={async () => {
+                                            if (window.confirm('Are you sure you want to delete this skill?')) {
+                                                try {
+                                                    await deleteSkill(user.uid, skill.id);
+                                                    setSkills(prev => prev.filter(s => s.id !== skill.id));
+                                                } catch (err) {
+                                                    console.error('Error deleting skill:', err);
+                                                    setError('Failed to delete skill');
+                                                }
+                                            }
+                                        }}
+                                        title="Delete Skill"
+                                    >
+                                        🗑️
+                                    </button>
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <p className={styles.noSkills}>{t('profile.noSkills') || 'No skills added yet.'}</p>
+                    )}
                 </div>
 
                 <div className={styles.formActions}>

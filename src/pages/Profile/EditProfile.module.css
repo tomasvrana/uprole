@@ -154,3 +154,77 @@
         gap: 1rem;
     }
 }
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.skillsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+}
+
+.skillInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skillCategory {
+    color: var(--color-text-tertiary);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.skillName {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.skillLevel {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+}
+
+.skillActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.noSkills {
+    color: var(--color-text-tertiary);
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius-sm);
+}
