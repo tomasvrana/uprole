@@ -158,9 +158,20 @@ const EditProfile = () => {
             }
 
             // 2. Geocode location if city/country changed or missing coords
-            let locationUpdates = { ...formData.location };
+            let locationUpdates = {
+                city: formData.location.city || '',
+                country: formData.location.country || '',
+            };
 
-            // Only geocode if we have a city and it's different from profile or profile missing coords
+            // Preserve existing coords from profile as a baseline
+            if (profile?.location?.lat != null && !isNaN(profile.location.lat)) {
+                locationUpdates.lat = profile.location.lat;
+            }
+            if (profile?.location?.lng != null && !isNaN(profile.location.lng)) {
+                locationUpdates.lng = profile.location.lng;
+            }
+
+            // Only geocode if we have a city and it's different from profile
             const locationChanged =
                 formData.location.city !== profile?.location?.city ||
                 formData.location.country !== profile?.location?.country;
@@ -178,13 +189,21 @@ const EditProfile = () => {
                     }
                 } catch (geoError) {
                     console.error('Geocoding error:', geoError);
-                    // Continue saving even if geocoding fails
+                    // Continue saving with existing coords
                 }
-            } else if (!locationChanged && profile?.location) {
-                // Keep existing coords
-                locationUpdates.lat = profile.location.lat;
-                locationUpdates.lng = profile.location.lng;
+            } else if (locationChanged && !formData.location.city) {
+                // City was cleared — remove coords
+                delete locationUpdates.lat;
+                delete locationUpdates.lng;
             }
+
+            // Strip any undefined or NaN values to prevent Firestore errors
+            Object.keys(locationUpdates).forEach(key => {
+                const v = locationUpdates[key];
+                if (v === undefined || (typeof v === 'number' && isNaN(v))) {
+                    delete locationUpdates[key];
+                }
+            });
 
             const updates = {
                 ...formData,
